@@ -1,0 +1,113 @@
+/*html,body{height: 100%;}*/
+body {
+    position: relative;
+    background-color: #333;
+    font: 12px/1.1;
+}
+/*顶部导航*/
+#top-bar {
+    background-color: #333;
+    border-bottom: 2px solid #E04D00;
+}
+#top-bar a.navbar-brand{
+    color: #fff;
+}
+#top-bar a:hover{
+    color: #E04D00;
+}
+#top-bar .navbar-brand >img {
+    height: 40px;
+    margin-top: -10px;
+}
+#top-bar .code {
+    margin-right: 20px;
+}
+/*搜索框*/
+#top-bar #search-bar {
+   line-height: 28px;
+}
+#top-bar #search-bar input{
+    display: inline-block;
+    background-color: #333;
+    color: #FFF;
+    height: 28px;
+    width: 100px;
+    padding: 0 1.7em 0 .5em;
+    border: none;
+    border-radius: 14px;
+}
+#top-bar #search-bar input:focus{
+    width: 220px;
+    border: 1px solid #E04D00;
+    box-shadow: 0 0 4px #E04D00 inset;
+    transition: width .5s;
+    -moz-transition: width .5s; /* Firefox 4 */
+    -webkit-transition: width .5s; /* Safari 和 Chrome */
+    -o-transition: width .5s; /* Opera */
+}
+
+#top-bar #search-bar button {
+    display: inline-block;
+    background: transparent;
+    width: 28px;
+    height: 28px;
+    margin-left: -32px;
+    border: none;
+    padding: 0;
+}
+#top-bar #search-bar button:hover>span {
+    color: #E04D00;
+}
+#top-bar #search-bar button>span {
+    color: #FFF;
+}
+/*页面主要内容区*/
+#page-content{
+    height: auto;
+    width: 100%;
+    padding-top: 50px;
+}
+
+/*页脚*/
+.footer >p {
+    text-indent: 0;
+    letter-spacing: 1em;
+    line-height: 1.5em;
+    color: #FFF;
+}
+.footer {
+    border-top: 1px solid #E04D00;
+    height: 1.5em;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    background: rgba(100,100,100,0.5);
+}
+/*回到顶部*/
+#to-top {
+    display: none;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    background: #999 transparent;
+    border-radius: 25px;
+    border: 2px solid #E04D00;
+}
+#to-top>a {
+    display: block;
+    color: #fff;
+    font-size: 30px;
+    line-height: 45px;
+    text-align: center;
+    text-decoration: none;
+}
+#to-top>a:hover {
+    color: #E04D00;
+}
+/*ps滚动条插件*/
+.ps > .ps__scrollbar-y-rail > .ps__scrollbar-y, .ps:hover > .ps__scrollbar-y-rail:hover > .ps__scrollbar-y{
+  background-color:  #E04D00;
+}

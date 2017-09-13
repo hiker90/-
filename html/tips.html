@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Tips-简记</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link id="favicon" href="../images/my_logo.ico" rel="icon"/>
+<!-- css 引入 -->
+  <!-- bootstrap -->
+  <link href="..\bootstrap-3.3.7-dist\css\bootstrap.min.css" rel="stylesheet">
+  <!-- 自定义样式 -->
+  <link rel="stylesheet" href="../css/common.css">
+<!-- 脚本 引入 -->
+  <!-- jquery -->
+  <script src="../js/jquery-1.11.1.min.js"></script>
+  <!--[if lt IE 9]>
+  <script src="../js/html5shiv.js"></script>
+  <script src="../js/respond.min.js"></script>
+  <![endif]-->
+  <!-- bootstrap -->
+  <script src="../bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+  <!-- 滚动条美化 -->
+  <script src="../js/nicescroll.js"></script>
+  <!-- 至顶功能 -->
+  <script src="../js/toTop.js"></script>
+  <style>
+    body {
+      background: url(../images/banner.jpg) no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+    }
+
+    #page-content .panel {
+      border-radius: 0;
+      background: transparent;
+      line-height: 1.8em;
+    }
+    #page-content .panel .panel-heading {
+      text-align: center;
+    }
+    #page-content .panel .panel-title a {
+      display: inline-block;
+      /*opacity: 0.5;*/
+    }
+    #page-content h6.media-object {
+      display: inline-block;
+      background-color: #ccc;
+      width: 30px;
+      height: 30px;
+      text-align: center;
+      font-size: 20px;
+      line-height: 30px;
+      margin: 0;
+    }
+    #page-content .media-heading .badge {
+      background-color: #E04D00;
+    }
+    /*引入代码 格式*/
+    pre {
+        background-color: rgba(80,80,80,0.8);
+        font-size: 14px;
+    }
+    pre code {color: #FFF;}
+    code .tag {color: #FF0090;}
+    code .attr {color: #71EA00;}
+    code .val {color: #00B4FF;}
+    code .z {color: #FF932E;}
+
+  </style>
+</head>
+<body>
+  <nav id="top-bar" class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- header包括brand商标、可折叠汉堡导航图表 -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#page-navbar" aria-expanded="false">
+          <span class="sr-only">导航切换</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="welcome.html"><img src="../images/logo.png" alt="YANHUI'S blog" class="pull-left"> <span class="text-hide">博  客</span></a>
+      </div>
+
+      <!-- 小屏幕设备折叠隐藏导航部分-->
+      <div class="collapse navbar-collapse" id="page-navbar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span> 首 页 </a></li>
+          <li><a href="javascript:void(0)"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> 文 章 </a></li>
+          <li><a href="tips.html"><span class="glyphicon glyphicon-pencil" aria-hidden="true"></span> 简 记 </a></li>
+          <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-list" aria-hidden="true"></span> 分 类 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li class="disabled"><a href="javascript:void(0)">HTML</a></li>
+              <li class="disabled"><a href="javascript:void(0)">CSS</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="disabled"><a href="javascript:void(0)">JavaScript</a></li>
+              <li role="separator" class="divider"></li>
+              <li class="disabled"><a href="javascript:void(0)">JQuery</a></li>
+              <li><a href="bootstrap.html">Bootstrap</a></li>
+            </ul>
+          </li>
+        </ul>
+        <div class="navbar-text navbar-right code"><span class="glyphicon glyphicon-qrcode" aria-hidden="true"></span><span class="sr-only">我的二维码</span></div>
+        <!-- 可选的搜索框 -->
+        <form class="navbar-form navbar-right" id="search-bar">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="搜索……">
+            <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+          </div>
+        </form>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <!-- 顶部固定导航条 结束 -->
+  <div id="page-content">
+    <div class="panel-group" id="sec-select" role="tablist" aria-multiselectable="true">
+      <div class="panel panel-info">
+        <div class="panel-heading" role="tab" id="secOne">
+          <h3 class="panel-title">
+            <a role="button" data-toggle="collapse" data-parent="#sec-select" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              HTML <span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>
+            </a>
+          </h3>
+        </div>
+        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="secOne">
+          <div class="panel-body">
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">1</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading">我的第一个条目<span class="badge">4</span></h3>
+                <p>我的第一个条目我的第一个条目我的第一个条目我的第一个条目我的第一个条目我的第一个条目我的第一个条目我的第一个条目我的第一个条目</p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">2</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">3</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">4</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">5</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">6</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">7</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-warning">
+        <div class="panel-heading" role="tab" id="secTwo">
+          <h3 class="panel-title">
+            <a class="collapsed" role="button" data-parent="#sec-select" data-toggle="collapse" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              CSS <span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>
+            </a>
+          </h3>
+        </div>
+        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="secTwo">
+          <div class="panel-body">
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">1</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">2</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">3</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">4</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">5</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <!-- <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">2</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div> -->
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-danger">
+        <div class="panel-heading" role="tab" id="secThree">
+          <h3 class="panel-title">
+            <a class="collapsed" role="button" data-parent="#sec-select" data-toggle="collapse" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              JavaScript <span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>
+            </a>
+          </h3>
+        </div>
+        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="secThree">
+          <div class="panel-body">
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">1</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">2</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">3</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">4</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">5</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">6</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">7</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">8</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">9</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">10</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">11</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-success">
+        <div class="panel-heading" role="tab" id="secFour">
+          <h3 class="panel-title">
+            <a class="collapsed" role="button" data-parent="#sec-select" data-toggle="collapse" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              JavaScript plugins <span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>
+            </a>
+          </h3>
+        </div>
+        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="secFour">
+          <div class="panel-body">
+          <div class="container-fluid">
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">1</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading">niceScroll <span class="badge">滚动条</span></h3>
+                <ol>
+                  <li><b>引入：</b><var>nicescroll.js</var> <b>下载地址</b> <a href="https://github.com/inuyaksa/jquery.nicescroll/releases">https://github.com/inuyaksa/jquery.nicescroll/releases</a></li>
+                  <li><b>初始化：</b><span class="text-danger">必须在 <var>$(document).ready</var> 中进行。</span>
+                  <pre><code>$("html").niceScroll(options);</code></pre>
+                  </li>
+                  <li><b>参数配置：</b>options 以 <kbd>键值对</kbd> 形式出现，以 <kbd>{</kbd> <kbd>}</kbd> 包裹， <kbd>，</kbd> 分割。简单配置示例：
+                  <pre><code><span class="tag">$(</span><span class="attr">"html"</span><span class="tag">)</span>.niceScroll<span class="tag">({</span><br>  touchbehavior: <span class="val">false</span></span>,<span class="z">//激活拖拽滚动</span><br>  cursorcolor: <span class="val">"#E04D00"</span>,<span class="z">//滚动条颜色，16进制表示</span><br>  cursoropacitymax: <span class="val">1</span>,<span class="z">//滚动条最大透明度</span><br>  cursorwidth: <span class="val">8</span>,<span class="z">//滚动条宽度</span><br>  horizrailenabled: <span class="val">true</span>,<span class="z">//水平滚动</span><br>  cursorborderradius: <span class="val">5</span>,<span class="z">//滚动条圆角</span><br>  autohidemode: <span class="val">true</span>,<span class="z">//滚动自动隐藏</span><br>  background: <span class="val">'none'</span>,<span class="z">//滚动条背景</span><br>  cursorborder: <span class="val">'none'</span><span class="z">//滚动条边框</span><br><span class="tag">})</span>;</code></pre>
+                  </li>
+                  <li><b>部分功能：</b>
+                    <ul>
+                      <li><b>窗口改变时重置滚动条大小</b> <pre><code>$("#mydiv").getNiceScroll().resize();</code></pre></li>
+                      <li><b>滚动至：</b><pre><code>$("#mydiv").getNiceScroll(0).doScrollLeft(x, duration); <span class="z">// X轴至某处</span><br>$("#mydiv").getNiceScroll(0).doScrollTop(y, duration); <span class="z">// Y轴至某处</span></code></pre></li>
+                    </ul>
+                  </li>
+                  <li><b class="text-danger">使用时遇到的问题：</b>bootstrap 的折叠元素，展开时，滚动条不能重置，导致页面无法滚动到底。</li>
+                </ol>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">2</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading">perfect-Scroll <span class="badge">滚动条</span></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">3</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">4</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">5</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">6</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">7</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">8</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">9</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">10</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">11</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+      <div class="panel panel-primary">
+        <div class="panel-heading" role="tab" id="secFive">
+          <h3 class="panel-title">
+            <a class="collapsed" role="button" data-parent="#sec-select" data-toggle="collapse" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              Bootstrap <span class="glyphicon glyphicon glyphicon-tags" aria-hidden="true"></span>
+            </a>
+          </h3>
+        </div>
+        <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="secFive">
+          <div class="panel-body">
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">1</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">2</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">3</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">4</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">5</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">6</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">7</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">8</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">9</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">10</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+            <div class="media">
+              <div class="media-left">
+                <h6 class="media-object">11</h6>
+              </div>
+              <div class="media-body">
+                <h3 class="media-heading"></h3>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- 底部版权开始 -->
+  <div class="footer" id="footer">
+    <p>颜  辉  <span class="glyphicon glyphicon-copyright-mark"></span>  制  作</p>
+  </div>
+  <!-- 底部版权结束 -->
+  <!-- 回到顶部 开始 -->
+  <div id="to-top">
+    <a href="#">顶</a>
+  </div>
+  <!-- 回到顶部 结束 -->
+  <script>
+    $(function(){
+      $("html").niceScroll({
+        cursorcolor:"#E04D00",
+        cursoropacitymax:1,
+        cursorwidth:6,
+        cursorborderradius:3,
+        autohidemode:true,
+        background:'#ccc',
+        cursorborder:'none'
+      });
+
+    })
+  </script>
+</body>
+</html>

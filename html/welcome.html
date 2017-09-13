@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1;">
+    <title>Welcome!</title>
+    <link id="favicon" href="../images/my_logo.ico" rel="icon"/>
+    <script src="../js/jquery-1.11.1.min.js"></script>
+    <style>
+    /*初始化*/
+      body,div,a,h3,p,img,ul,li {margin: 0;padding: 0;}
+      a {text-decoration: none; }
+      /*使背景图平铺窗口*/
+      html,body {height: 100%;width: 100%;overflow: hidden;}
+      body {position: relative;font-size: 12px;line-height: 1.1;font-family: Helvetica Verdana arial Sans-serif;background-image: url(../images/cq05.jpg);background-repeat: no-repeat;background-size: cover;}
+      /*背景*/
+    /*背景层*/
+      #bg-l, #bg-r {position: absolute;width: 50%;height: 100%;z-index: 1000;opacity: 0.9;}
+      #bg-l {left: 0;top: 0;background-color: #333;}
+      #bg-r {right: 0;top: 0;background-color: #E04D00;}
+    /*中心盒子*/
+      #main {position: absolute;top: 50%;left: 50%;box-shadow: 0 0 1em #111;background-color: rgba(0,0,0,0.2);z-index: 2000;overflow: hidden;}
+    /*左侧*/
+      #main .photo, #main .enter {float: left;height: 100%;width: 50%;}
+      #main .photo {background: #333;overflow: hidden;}
+      #main .photo>img {width: 100%;margin: 2% 0 2% 2%;}
+      #main .photo>p {display: block;margin-top: -100px;color: #FFF;font-size: 2em;line-height: 1.1;background-color: #E04D00;letter-spacing: 2px;}
+    /*右侧*/
+      #main .enter {position: relative;background: rgba(224,77,0,0.6);text-align: center;}
+      #main .enter> img {height: 8em;width: 8em;margin-top: 10%;}
+      #main .enter> h3 {color: #fff;font-size: 3em;letter-spacing: 10px;}
+      #main .enter> a {position: absolute;bottom: 10%;left: 50%;width: 3.1em;margin-left: -1.9em;display: inline-block;color: #FFF;font-size: 2.4em;line-height: 1;padding: 0.1em 0.2em;border: 1px solid #fff; border-radius: 1.2em;z-index: 2000;}
+      #main .enter> a:hover{background-color: #FFF;color: #E04D00;box-shadow: 0 0 10px #DDD;}
+    /*弹出菜单按钮*/
+      .menu-btn {position: absolute;right: 0;top: 50%;width: 12px;height: 24px;z-index: 4000;}
+      .menu-btn .menu-block {display: block;height: 6px;width: 6px;background-color: #FFF425;margin-bottom: 4px;box-shadow: 0 0 6px #C3C3C3;}
+    /*弹出菜单*/
+      .enter .dropdown-menu {/*display: none;*/position: absolute;top: 0;right: -100%;width: 100%;height:100%;text-align: left;background-color: #333;z-index: 3000;transition:all .5s;}
+      .enter .dropdown-menu ul> li {list-style: none;display: inline-block;width: 25%;height: 25%;text-align:center;background-color: #111;}
+      .enter .dropdown-menu a{display: block;color: #fff;font-size: 1.6em;line-height: 6;background-color: #333;margin: 0 1px 1px 0;}
+      .enter .dropdown-menu a:hover {position: relative;box-shadow: 0 0 20px #111;color: #E04D00;}
+    /*雪花*/
+      .flow {position: absolute;top: -100%;background: url(../images/snow2.png) no-repeat;background-size: contain;z-index: 5000;opacity: 0.6;}
+    /*响应式*/
+      @media only screen and (min-width: 1024px) {
+        #main {width: 960px;height: 500px;margin-left: -480px;margin-top: -250px;}
+      }
+      @media only screen and (min-width: 769px) and (max-width: 1023px) {
+        #main {width: 700px;height: 360px;margin-left: -350px;margin-top: -130px;}
+      }
+      @media only screen and (max-width: 768px){
+        #main {width: 80%;height: 80%;top: 10%;left: 10%;}
+        #bg-l, #bg-r, #main .photo {display: none;}
+        #main .enter {width:100%;}
+      }
+    </style>
+</head>
+<body>
+  <div id="bg-l"></div>
+  <div id="bg-r"></div>
+  <div id="main">
+    <div class="photo">
+      <img src="../images/cat.jpg" alt="">
+      <p class="slogen">Welcome to my frontend site!</p>
+    </div>
+    <div class="enter">
+      <div class="menu-btn">
+        <span class="menu-block"></span>
+        <span class="menu-block"></span>
+        <span class="menu-block"></span>
+      </div>
+      <div class="dropdown-menu">
+        <ul><li><a href="javascript:void(0)" title="HTML">HTML</a></li><li><a href="javascript:void(0)" title="CSS">CSS</a></li><li><a href="javascript:void(0)" title="JavaScript">JS</a></li><li><a href="javascript:void(0)" title="JQuery">JQuery</a></li><li><a href="bootstrap.html" title="Bootstrap">B</a></li><li><a href="javascript:void(0)" title="React">React</a></li></ul>
+      </div>
+      <img src="../images/logo.png">
+      <h3 class="title">YAN HUI's BLOG</h3>
+      <a href="index.html" class="enter-link">ENTER</a>
+    </div>
+  </div>
+  <script>
+    $(function(){
+      var gotoMenu = $('#main').find('.dropdown-menu');
+      var gotoBtn = $('#main').find('.menu-btn');
+      // 菜单按钮闪烁
+      var timer = setInterval(function(){ gotoBtn.fadeOut(500).fadeIn(500); },2000);
+      // 弹出菜单
+      gotoBtn.click(function(event) {
+        var menuRight = parseInt(gotoMenu.css('right'));
+        if(menuRight < 0 ){
+          gotoMenu.css("right",0);
+        }else{
+          gotoMenu.css("right","-100%");
+        };
+      })
+      .mouseover(
+        function(event) {
+          clearInterval(timer);
+          $(this).children('span').css('backgroundColor','#FFF');
+      }).mouseout(
+        function(event){
+          timer = setInterval(function(){ gotoBtn.fadeOut(500).fadeIn(500); },2000);
+          $(this).children('span').css('backgroundColor','#FFF425');
+      });
+      // 跳转链接点按凹陷
+      var linkBtn = gotoMenu.find("a");
+      linkBtn.mousedown(function(event) {
+        var shandowIn = ' 0 0 20px #111 inset';
+        $(this).css("box-shadow", shandowIn);
+      });
+      // 雪花
+      // var winH = $(window).height(),
+      //     winW = $(window).width()
+      // function flow(){
+      //   var newEle = $("<div class='flow'></div>");
+      //   var starPosX = Math.random()*winW;
+      //   var size = Math.random()*50;
+      //   newEle.appendTo('body').css({
+      //     right: starPosX,
+      //     width:size,
+      //     height:size
+      //   }).animate({top:winH},size*400,function(e){$(this).remove()});
+      // }
+      // var snow = setInterval(flow,200);
+
+    });
+
+  </script>
+</body>
+</html>
